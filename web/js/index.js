@@ -1,1 +1,1 @@
-var myChart = new Chart();
+var Chart = require('chart.js');
