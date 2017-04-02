@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/vitals.css">
   <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
 
   <script src="../bower_components/angular/angular.min.js"></script>
@@ -15,14 +16,39 @@
 </head>
 
 <body ng-app="ngHealth" ng-controller="vitalsController">
-  <div layout="column" layout-align="center center" style="border: 1px solid red; width: 25%;">
-    <md-toolbar flex>Vitals</md-toolbar>
-    <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-      <div>
-        <md-input-container>
-          <label for="txtWeight">Weight (lbs.)</label>
-          <input id="txtWeight" ng-model="weight" type="text" md-autofocus></input>
-        </md-input-container>
+  <div style="border: 1px solid red; width: 25%;">
+    <md-toolbar layout="column" layout-align="center center">Vitals</md-toolbar>
+    <md-content layout="column" layout-align="center center" layout-padding>
+      <div id="vitals">
+        <md-content id="vitalsDate">
+          <md-input-container>
+            <label for="ctrlDate">Date</label>
+            <input id="ctrlDate" ng-model="date" type="date"></input>
+          </md-input-container>
+        </md-content>
+        <md-content id="vitalsWeight">
+          <md-input-container>
+            <label for="ctrlWeight">Weight (lbs.)</label>
+            <input id="ctrlWeight" ng-model="weight" type="number"></input>
+          </md-input-container>
+        </md-content>
+        <md-content id="vitalsBloodPressure">
+          <md-input-container>
+            <label for="ctrlSystolic">Systolic</label>
+            <input id="ctrlSystolic" ng-model="systolic" type="number"></input>
+          </md-input-container>
+          <md-input-container>
+            <label for="ctrlDiastolic">Diastolic</label>
+            <input id="ctrlDiastolic" ng-model="diastolic" type="number"></input>
+          </md-input-container>
+        </md-content>
+        <md-content id="vitalsPulseRate">
+          <md-input-container>
+            <label for="ctrlPulseRate">Pulse Rate</label>
+            <input id="ctrlPulseRate" ng-model="pulseRate" type="number"></input>
+          </md-input-container>
+        </md-content>
+        <md-button class="md-raised md-primary">Submit</md-button>
       </div>
     </md-content>
   </div>
