@@ -1,3 +1,7 @@
 #vitals {
   display: grid;
 }
+
+#vitalsBloodPressure md-input-container {
+  width: 40%;
+}
