@@ -15,11 +15,11 @@
   <script src="vitals.controller.js"></script>
 </head>
 
-<body ng-app="ngHealth" ng-controller="vitalsController">
-  <div style="border: 1px solid red;">
+<body ng-app="ngHealth" ng-controller="vitalsController" layout-align="start center" layout="column">
+  <div layout-align="center start" flex="25">
     <md-toolbar layout="column" layout-align="center center">Vitals</md-toolbar>
     <md-content layout="column" layout-align="center center" layout-padding>
-      <div id="vitals"  style="border: 1px solid green;">
+      <div id="vitals" flex>
         <md-content id="vitalsDate">
           <md-input-container>
             <label for="ctrlDate">Date</label>
